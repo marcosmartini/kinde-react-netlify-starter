@@ -1,0 +1,27 @@
+name: Run Node.js script on deployment status
+
+on:
+  deployment_status:
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+    if: github.event.deployment_status.state == 'success'
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Run script
+        run: npm i && node .github/actions/add-url-to-kinde/index.js
+        env:
+          APP_ID: ${{ secrets.APP_ID }}
+          BUSINESS_DOMAIN: ${{ secrets.BUSINESS_DOMAIN }}
+          M2M_CLIENT_ID: ${{ secrets.M2M_CLIENT_ID }}
+          M2M_CLIENT_SECRET: ${{ secrets.M2M_CLIENT_SECRET }}
+          ENVIRONMENT: ${{ github.event.deployment_status.environment}}
+          ENVIRONMENT_URL: ${{ github.event.deployment_status.environment_url}}
