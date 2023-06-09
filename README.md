@@ -2,6 +2,8 @@
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/marcosmartini/kinde-react-netlify-starter)
 
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/githubmarcosmartini/kinde-react-netlify-starter)
+
 ## Register an account on Kinde
 
 To get started set up an account on [Kinde](https://app.kinde.com/register).
