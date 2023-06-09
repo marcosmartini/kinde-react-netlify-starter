@@ -1,3 +1,6 @@
-export const onPreBuild = function () {
-  console.log("Hello world from onPreBuild event!");
+// index.js
+module.exports = {
+  onPreBuild() {
+    console.log("This is printed in the build logs");
+  },
 };
