@@ -1,6 +1,6 @@
 [template.environment]
-  REACT_APP_KINDE_CLIENT_ID = "Your Client ID"
   REACT_APP_KINDE_DOMAIN = "Your Kinde domain"
+  REACT_APP_KINDE_CLIENT_ID = "Your Client ID"
 
 [[plugins]]
 package = "/plugins/kinde-plugin-add-callback-url"
